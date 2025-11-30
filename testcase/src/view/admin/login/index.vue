@@ -1,6 +1,6 @@
 <script setup>
 import { tStr, tTimer } from "@techui/utils";
-import menuFlat from "@view/navigation/menu-admin";
+import menuFlat from "@view/navigation/menu";
 import { inject, reactive } from 'vue';
 import { useRoute, useRouter } from "vue-router";
 import bgDarkBlack from "./images/darkBlack.png";
