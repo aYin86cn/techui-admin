@@ -175,19 +175,19 @@ onMounted(() => {
   </div>
 </template>
 <style lang="less">
-.background-demo-wrap{ min-height:100%;  margin:0 auto; padding:20px 20px 100px 20px; .por;
-  .operat-bar{.flex(20px); padding:0 20px; margin-bottom:20px;
+.background-demo-wrap{ min-height:100%;  margin:0 auto; padding:20px 20px 100px 20px; position: relative;;
+  .operat-bar{display: flex; gap:20px; padding:0 20px; margin-bottom:20px;
     .form-group{
       .label{margin:10px 0;}
       .tui-radio{max-height:500px; overflow: auto; flex-wrap: nowrap; padding-top:1px;
-        .tui-radio-item{.bdra(0)!important;}
+        .tui-radio-item{ border-radius: 0!important;}
       }
     }
-    .form-wrap{.flex(20px); }
+    .form-wrap{display: flex; gap:20px; }
   }
-  .demo-layout{ .flex(20px); padding:20px; flex-wrap: wrap; .por;
+  .demo-layout{ display: flex; gap:20px; padding:20px; flex-wrap: wrap; position: relative;
     .group-title{width: 100%; font-size: 18px; padding:10px 0; font-weight: bold;}
-    .group{.flex(10px); align-items: start;
+    .group{display: flex; gap:5px; align-items: start;
       
       
     }

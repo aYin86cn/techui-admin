@@ -58,10 +58,10 @@ const getCurrentLangLabel = () => {
   </div>
 </template>
 <style lang="less">
-.language-switcher-demo {.centerAbsolute; width: 400px; padding: 30px; border-radius: 12px; 
-  .bgc(var(--common-bg));
+.language-switcher-demo {position: absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%); width: 400px; padding: 30px; border-radius: 12px; 
+  background-color: var(--common-bg);
   box-shadow: 0 4px 10px var(--shadow-weak);
-  .header { margin:10px 0 0 0; .centerFlex;
+  .header { margin:10px 0 0 0; display: inline-flex; align-items: center; justify-content: center;
     .tui-icon{font-size: 32px; margin-right:10px;}
     h2 { margin: 0; text-align: center; font-size: 24px; font-weight: 600; }
   }
@@ -69,12 +69,12 @@ const getCurrentLangLabel = () => {
     .tui-button {margin:0; width: 100%; }
   }
   .current-lang { margin-top: 20px; text-align: center; font-size: 14px;
-    span { font-weight: 600; .fc(var(--primary-base));}
+    span { font-weight: 600; color: var(--primary-base);}
   }
-  .desc{font-size: 12px;text-align: center; .fc(var(--primary-base));
+  .desc{font-size: 12px;text-align: center; color: var(--primary-base);
     .tui-icon{ vertical-align: bottom; margin-right:5px; }
   }
-  .notice{font-size: 12px; text-align: center; .fc(var(--warning-base));
+  .notice{font-size: 12px; text-align: center; color: var(--warning-base);
     .tui-icon{ vertical-align: bottom; margin-right:5px; }
   }
 }

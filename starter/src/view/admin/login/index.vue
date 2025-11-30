@@ -1,6 +1,6 @@
 <script setup>
+import menuFlat from "@/view/navigation/menu";
 import { tStr, tTimer } from "@techui/utils";
-import menuFlat from "@view/navigation/menu-admin";
 import { inject, reactive } from 'vue';
 import { useRoute, useRouter } from "vue-router";
 import bgDarkBlack from "./images/darkBlack.png";
@@ -84,7 +84,7 @@ const handleValidate = (validateResult) => {
 
 <style lang="less">
 .tui-login-admin{
-  .tui-theme-toggle{.poa; z-index: 2000; top:15px; right:15px; }
+  .tui-theme-toggle{position: absolute; z-index: 2000; top:15px; right:15px; }
   
 }
 </style>

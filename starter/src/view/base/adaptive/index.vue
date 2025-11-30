@@ -88,15 +88,15 @@ onMounted(() => {
   </div>
 </template>
 <style lang="less">
-.adaptive-demo-wrap{ min-height:100%;margin:0 auto; padding:20px; .por;
-  .operat-bar{.flex(30px); padding:0 20px; pointer-events: all; flex-wrap: wrap;
+.adaptive-demo-wrap{ min-height:100%;margin:0 auto; padding:20px; position: relative;
+  .operat-bar{display: flex; gap:30px; padding:0 20px; pointer-events: all; flex-wrap: wrap;
     .form-group{
       .label{margin:10px 0;}
     }
   }
-  .grid-wrap{ .poa; inset:20px; top:120px; .grid(3,2,30px); padding:20px; flex-wrap: wrap; 
+  .grid-wrap{ position: absolute; inset:20px; top:120px; display: grid; grid-gap: 30px; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); padding:20px; flex-wrap: wrap; 
     .grid-item{
-      &:not(:nth-child(2),:nth-child(5)){.bgc(var(--primary-base_op2)); .bd(var(--tone-strongest),1px); .bdra(10px); .bgBlur;}
+      &:not(:nth-child(2),:nth-child(5)){background-color: var(--primary-base_op2); border: 1px solid var(--tone-strongest); border-radius: 10px; backdrop-filter: saturate(var(--tui-global-blur-satur,180%)) blur(var(--tui-global-blur-range,10px));}
     }
   }
 }

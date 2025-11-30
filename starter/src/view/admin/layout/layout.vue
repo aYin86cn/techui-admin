@@ -112,25 +112,24 @@ onMounted(() => {
   </TuiAdaptive>
 </template>
 <style lang="less">
-
-.tui-adpt-toggle{.poa;top:50%; right:20px; .fixc("y"); z-index: 10; .flex(10px); flex-direction: column; align-items: center;
-  .tui-close{width:18px; height:18px; .bgc(@rel5); .centerFlex; .bdra(50%); cursor: pointer; opacity: .5; .ani;
-    .tui-icon{ .fc(@wh); font-size:10px; line-height: 1;}
+.tui-adpt-toggle{position: absolute;top:50%; right:20px; transform: translateY(-50%); z-index: 10; display: flex; gap:5px; flex-direction: column; align-items: center;
+  .tui-close{width:18px; height:18px; background-color: #ff2222; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; cursor: pointer; opacity: .5; transition-duration: .5s; transition-timing-function: cubic-bezier(0.78, 0.02, 0.2, 1); transition-delay: 0s; transition-property: all;
+    .tui-icon{ color: #fff; font-size:10px; line-height: 1;}
     &:hover{opacity: 1;}
   }
 }
-.tui-cross-line{.pof; inset:0; z-index: 9000; pointer-events: none;;
+.tui-cross-line{position: fixed; inset:0; z-index: 9000; pointer-events: none;
   &:before,
-  &:after{.poa; content:""; .bgc(@cyl5);}
+  &:after{position: absolute; content:""; background-color: #19e5e6;}
 
-  &:before{left:50%; .fixc("x"); top:0; bottom:0; width:1px;}
-  &:after{top:50%; .fixc("y"); left:0; right:0; height:1px;}
+  &:before{left:50%; transform: translateX(-50%); top:0; bottom:0; width:1px;}
+  &:after{top:50%; transform: translateY(-50%); left:0; right:0; height:1px;}
 
-  .tui-close{ pointer-events: all; .poa; .centerAbsolute; z-index: 99; width:18px; height:18px; .centerFlex; .bdra(50%); cursor: pointer; .ani;
-    .tui-icon{ .fc(@cyl5); font-size: 20px;}
+  .tui-close{ pointer-events: all; position: absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%); z-index: 99; width:18px; height:18px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; cursor: pointer; transition-duration: .5s; transition-timing-function: cubic-bezier(0.78, 0.02, 0.2, 1); transition-delay: 0s; transition-property: all;
+    .tui-icon{ color: #19e5e6; font-size: 20px;}
     &:hover{opacity: 1;}
   }
   
 }
-.tui-logo-wrap{.bgc(var(--shadow-weakest,fade(@bk,10%)));}
+.tui-logo-wrap{background-color: var(--shadow-weakest,fade(#000,10%));}
 </style>

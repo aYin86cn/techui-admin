@@ -256,18 +256,18 @@ console.log('当前主题:', $gTheme.value);
   
   .header {
     text-align: center; margin-bottom: 60px; padding-bottom: 30px;
-    .title { font-size: 42px; font-weight: 700; .fc(var(--font-stronger)); margin: 0; }
+    .title { font-size: 42px; font-weight: 700; color: var(--font-stronger); margin: 0; }
   }
   
   .content { .section { margin-bottom: 60px; } }
   
   .section-title {
-    font-size: 28px; font-weight: 600; margin-bottom: 24px; padding-bottom: 12px; .bdb(var(--common-bd));
+    font-size: 28px; font-weight: 600; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--common-bd);
   }
   
   .paragraph {
     font-size: 16px; line-height: 1.8; margin-bottom: 16px;
-    .code-inline {padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; .fc(var(--danger-base)); font-size: 14px; }
+    .code-inline {padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; color: var(--danger-base); font-size: 14px; }
   }
   
   .concept-grid {
@@ -281,16 +281,16 @@ console.log('当前主题:', $gTheme.value);
   
   .modules-list {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;
-    .module-item { .bgc(var(--common-bg)); .bd(var(--common-bd)); border-radius: 8px; padding: 20px; transition: box-shadow 0.3s, transform 0.3s;
+    .module-item { background-color: var(--common-bg); border: 1px solid var(--common-bd); border-radius: 8px; padding: 20px; transition: box-shadow 0.3s, transform 0.3s;
       &:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.1); transform: translateY(-3px); }
     }
     .module-header { display: flex; align-items: center; margin-bottom: 12px; }
     .module-icon { font-size: 32px; margin-right: 12px; }
-    .module-title { font-size: 20px; font-weight: 600; .fc(var(--font-stronger)); margin: 0; }
+    .module-title { font-size: 20px; font-weight: 600; color: var(--font-stronger); margin: 0; }
     .module-desc { font-size: 14px; margin-bottom: 12px; }
     .module-features { list-style: none; padding: 0; margin: 0; }
     .feature-item { font-size: 13px; padding: 6px 0; padding-left: 20px; position: relative;
-      &:before { content: '▸'; position: absolute; left: 0; .fc(var(--primary-base)); font-weight: bold; }
+      &:before { content: '▸'; position: absolute; left: 0; color: var(--primary-base); font-weight: bold; }
     }
   }
   
@@ -301,19 +301,16 @@ console.log('当前主题:', $gTheme.value);
   
   .advantages-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
-    .advantage-card { .bgc(var(--common-bg)); .bd(var(--common-bd)); .fc(var(--font-stronger)); .bdl(var(--primary-weaker),5px); padding: 20px; border-radius: 6px; position: relative; padding-left: 70px; min-height: 100px; }
+    .advantage-card { background-color: var(--common-bg); border: 1px solid var(--common-bd); color: var(--font-stronger); border-left: 5px solid var(--primary-weaker); padding: 20px; border-radius: 6px; position: relative; padding-left: 70px; min-height: 100px; }
     .advantage-number { position: absolute; left: 20px; top: 20px; width: 36px; height: 36px; background: #3498db; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; }
-    .advantage-title { font-size: 18px; font-weight: 600;.fc(var(--font-stronger)); margin: 0 0 8px 0; }
+    .advantage-title { font-size: 18px; font-weight: 600; color: var(--font-stronger); margin: 0 0 8px 0; }
     .advantage-desc { font-size: 14px; margin: 0; line-height: 1.6; }
   }
   
   .quickstart-grid {
     display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap:20px;
     .quickstart-step {  border-radius: 8px; padding: 0; }
-    .step-title { font-size: 20px; font-weight: 600; .fc(var(--font-stronger)); margin: 0 0 16px 0; }
+    .step-title { font-size: 20px; font-weight: 600; color: var(--font-stronger); margin: 0 0 16px 0; }
   }
-
-
 }
-
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import avatarDefault from "@assets/avatar/header.jpg";
+import avatarDefault from "@/assets/avatar/header.jpg";
 import { computed, inject, ref } from 'vue';
 import { useRouter } from "vue-router";
 
@@ -110,18 +110,18 @@ const sysMenuAct=(params)=>{
 </div>
 </template>
 <style lang="less">
-.sider-assist-wrap{ .bgc(var(--shadow-weaker,fade(@bk,10%))); z-index: 5; .flex(5px);
-  .item{position: relative; flex:1; text-align: center; .ani(.5s,background-color);line-height: 40px; font-size: 16px;  cursor: pointer;
-    .tui-icon{.fc(var(--sider-fc)); font-size: 18px; }
-    &:hover{.bgc(var(--sider-bg_act));}
+.sider-assist-wrap{ background-color: var(--shadow-weaker,fade(#000,10%)); z-index: 5; display: flex; gap:5px;
+  .item{position: relative; flex:1; text-align: center; transition-duration: .5s; transition-timing-function: cubic-bezier(0.78, 0.02, 0.2, 1); transition-delay: 0s; transition-property: background-color; line-height: 40px; font-size: 16px; cursor: pointer;
+    .tui-icon{color: var(--sider-fc); font-size: 18px; }
+    &:hover{background-color: var(--sider-bg_act);}
     .el-dropdown{line-height: 40px; height: 40px; font-size: 16px; display:inline-block; width: 100%;}
-    .avatar{width: 36px; height: 36px; .bdra(18px); .centerAbsolute;}
+    .avatar{width: 36px; height: 36px; border-radius: 18px; position: absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%);}
     .bell{ }
   }
 }
 .tui-expand{
-  .sider-assist-wrap{ height: 50px; padding:5px 10px;//请勿修改基础属性,如height
-    .item{ .bdra;
+  .sider-assist-wrap{ height: 50px; padding:5px 10px;
+    .item{ border-radius: 4px;
       &:nth-child(1){ flex:1.5;
         
       }
@@ -129,9 +129,9 @@ const sysMenuAct=(params)=>{
   }
 }
 .tui-collapse{
-  .sider-assist-wrap{ flex-direction: column; padding:0; height: 200px;//请勿修改基础属性，如height
-    .item{ .bdra(0);
-      &:nth-child(1){ height: 60px; line-height: 60px;  flex:none;
+  .sider-assist-wrap{ flex-direction: column; padding:0; height: 200px;
+    .item{ border-radius: 0;
+      &:nth-child(1){ height: 60px; line-height: 60px; flex:none;
         .el-dropdown{height: 60px;}
       }
     }

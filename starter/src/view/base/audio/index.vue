@@ -55,16 +55,16 @@ const {
 </template>
 <style lang="less">
 .audio-demo-wrap{ min-height:100%; width:1400px; margin:0 auto ; padding:20px; 
-  .blank-demo-inner{.flex(20px); padding:20px; flex-wrap: wrap; margin:0 0 50px 0;
-    .blank-demo-box{width:calc(12.5% - 18px); .por; .bgc(var(--common-bg)); .bd(var(--common-bd)); .bdra(5px); min-height:100px; .centerFlex;
+  .blank-demo-inner{display: flex; gap:20px; padding:20px; flex-wrap: wrap; margin:0 0 50px 0;
+    .blank-demo-box{width:calc(12.5% - 18px); position: relative; background-color: var(--common-bg); border: 1px solid var(--common-bd); border-radius: 5px; min-height:100px; display: inline-flex; align-items: center; justify-content: center;
       
-      .demo-title{.poa; left:0; top:0; margin:10px;}
-      .play-button{width: 40px; height: 40px; .bd(var(--font-weaker),4px); .bdra(50%); .centerFlex; cursor: pointer; .ani(.5s,scale); user-select: none;
-        .tui-icon{font-size:12px; .fc(var(--font-weak)); .ani;}
+      .demo-title{position: absolute; left:0; top:0; margin:10px;}
+      .play-button{width: 40px; height: 40px; border: 4px solid var(--font-weaker); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition-duration: .5s; transition-timing-function: cubic-bezier(0.78, 0.02, 0.2, 1); transition-delay: 0s; transition-property: scale; user-select: none;
+        .tui-icon{font-size:12px; color: var(--font-weak); transition-duration: .5s; transition-timing-function: cubic-bezier(0.78, 0.02, 0.2, 1); transition-delay: 0s; transition-property: all;}
         &:hover{scale:1.1;
-          .tui-icon{.fc(var(--font-strong));}
+          .tui-icon{color: var(--font-strong);}
         }
-        &:active{.bgc(var(--primary-weakest));}
+        &:active{background-color: var(--primary-weakest);}
       }
     }
   }
