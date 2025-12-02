@@ -16,8 +16,8 @@ const params={
   // license, 
   // subLicense,
   features:{
-    echarts:true,
-    advanced:true,
+    // echarts:true,
+    // advanced:true,
   }
 }
 TechUIInit(params).then(()=>{
