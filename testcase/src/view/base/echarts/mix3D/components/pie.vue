@@ -161,7 +161,7 @@ onUnmounted(()=>{
     > 
       <div class="total-digital" >
         <span class="desc">{{state.counter.title}}</span>
-        <TuiDigitalRolling  class="counter" :value="state.counter.num" size="mini" :interval="1000" :delay="2000" :dislocation="false" ></TuiDigitalRolling>
+        <TuiDigitalRolling  class="counter" :value="state.counter.num" size="small" :interval="1000" :delay="2000" :dislocation="false" ></TuiDigitalRolling>
       </div>
     </TuiEcharts>
   </div>

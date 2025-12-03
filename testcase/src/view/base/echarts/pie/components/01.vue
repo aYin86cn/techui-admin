@@ -165,7 +165,7 @@ onUnmounted(()=>{
     >
       <div class="total-digital" >
         <span class="desc">{{state.counter.title}}</span>
-        <TuiDigitalFlip size="mini" appearance="reverse" :value="state.counter.num" :interval="1000" :delay="2000" ></TuiDigitalFlip>
+        <TuiDigitalFlip size="small" appearance="reverse" :value="state.counter.num" :interval="1000" :delay="2000" ></TuiDigitalFlip>
       </div>
     </TuiEcharts>
   </div>

@@ -148,7 +148,7 @@ onUnmounted(()=>{
       <div class="unit">单位：万元</div> 
       <div class="total-digital">
         <span class="desc">{{ state.chartData.name }}</span>
-        <TuiDigitalRolling class="counter" size="mini" :value="state.total" :interval="1000" :dislocation="false"></TuiDigitalRolling>
+        <TuiDigitalRolling class="counter" size="small" :value="state.total" :interval="1000" :dislocation="false"></TuiDigitalRolling>
       </div>
     </TuiEcharts>
   </div>
